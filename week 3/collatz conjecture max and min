@@ -1,0 +1,53 @@
+#include <iostream>
+ 
+int main(){
+ 
+ int n=1, t=0, minv, maxv;
+ 
+ minv = 99999;
+ maxv = t;
+
+  while(n != 0){
+
+   std::cout << "Type a number: " << std::endl;
+   std::cin >> n;
+ 
+    for(int k = 0; n !=1; k++ ){
+
+      if(n % 2 == 0){
+
+        t++;   
+
+        n = n/2;   
+
+      } 
+      
+      
+      else{  
+
+        t++;
+
+        n = (n * 3) + 1; 
+
+      }   
+    }
+  
+   if(t < minv){
+
+     minv = t;
+    }
+   
+   if(t> maxv){
+     
+     maxv = t;
+    
+    }
+
+   std::cout << "the max value of t is:  " << maxv<< std::endl;
+   std::cout<< "the minimum value of t is:  "<< minv<< std::endl;
+   
+   t=0;
+
+  }
+
+}  

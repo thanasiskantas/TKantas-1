@@ -1,0 +1,25 @@
+#include<iostream>
+
+int fac(int v){
+  
+  int res = 1;
+    
+  for(int i=1; i<=v; i++){
+    
+    res = res * i;
+
+  }
+  
+  return res;
+}
+
+
+int main(){
+  
+  int x;
+  
+  std::cout<< "give a non-negative value: ";
+  std::cin>> x;
+  
+  std::cout<<std::endl << x<< "! = " << fac(x);
+}

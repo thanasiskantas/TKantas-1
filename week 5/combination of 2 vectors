@@ -1,0 +1,58 @@
+#include <iostream>
+#include <vector>
+
+void append_vectors(const std::vector<int>& vin1, const std::vector<int>& vin2, std::vector<int>& vout){
+  
+  for(int i=0; i< vin1.size(); i++){
+    vout.push_back(vin1[i]);
+  }
+
+  for(int j=0; j< vin2.size(); j++){
+    vout.push_back(vin2[j]);
+  }
+
+}
+
+int main(){
+  
+  int n1, n2, m1, m2; 
+ 
+  std::vector <int>vin1;
+  std::vector <int>vin2;
+  std::vector <int>vout;
+
+
+
+  // FIRST VECTOR
+  std::cout<<"type how many values do you want your first vector to have: "<<std::endl;
+  std::cin>> n1;
+
+  std::cout<<"type the values you want the first vector to contain: " << std::endl;
+  
+  for (int i=0; i<n1; i++){
+    std::cin>> m1;
+    vin1.push_back(m1);
+  }
+
+
+  //SECOND VECTOR
+  std::cout<<"type how many values do you want your second vector to have: "<<std::endl;
+  std::cin>> n2;
+
+  std::cout<<"type the values you want the second vector to contain: " << std::endl;
+  
+  for (int j=0; j<n2; j++){
+    std::cin>> m2;
+    vin2.push_back(m2);
+  }
+
+  append_vectors(vin1, vin2, vout);
+  
+
+  //VECTOR OUTPUT
+  std::cout<<"the combination of the 2 vectors is: "<< std::endl;
+  for (int z=0; z<vout.size(); z++){
+    std::cout<< vout[z]<<std::endl;
+  }
+
+}

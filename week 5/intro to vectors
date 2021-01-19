@@ -1,0 +1,22 @@
+#include<iostream>
+#include<vector>
+
+int main () {
+  
+  int n1, n2, n3;
+  
+  std::cout<<"write 3 numbers: "<< std::endl;
+
+  std::cin>> n1; 
+  std::cin>> n2; 
+  std::cin>> n3; 
+
+  std::vector<int>v;
+  
+  v.push_back(n1);
+  v.push_back(n2);
+  v.push_back(n3);
+
+  std::cout<< "first element * (second element + third element) is:  " << v[0]*(v[1] + v[2]);
+  
+}

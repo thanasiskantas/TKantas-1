@@ -1,0 +1,32 @@
+#include <iostream>
+#include <vector>
+ 
+double sum_vector(std::vector<double> vin){
+ 
+  double sum = 0;
+
+  for(int i = 0; i < vin.size(); i++){
+    sum = sum + vin[i];
+  }
+
+  return sum;
+ 
+}
+ 
+int main(){
+  int k, m;
+  std::vector<double> v;
+
+  std::cout<< "type the number of number you want the vector to have: " << std::endl;
+
+  std::cin>> k;
+  
+  for(int i=0; i<k; i++){
+    std::cout<< "give the next number of the vector: ";
+    std::cin>> m;
+    v.push_back(m);
+  }
+
+  std::cout << "the sum is: " << sum_vector(v) << std::endl;
+ 
+}

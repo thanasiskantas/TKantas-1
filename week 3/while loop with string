@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+
+int main (){
+
+  std::string var;
+
+  while(var != "stop"){
+    std::cout<< "please type a word: " << std::endl;
+
+    std::cin >> var;
+
+    std::cout<< "you just typed: " <<var <<std::endl;
+  }
+
+  std::cout<< "the program ended";
+
+    
+}

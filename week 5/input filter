@@ -1,0 +1,40 @@
+#include <iostream>
+#include <vector>
+
+void filter_v(const std::vector<double>& vin, double t, std::vector<double>& vout){
+  for (int i = 0; i<t; i++){
+
+    vout.push_back(vin[i]);
+
+  }
+}
+
+int main(){
+  int n;
+  int k;
+  int m;
+  std::vector<double> v1;
+  std::vector<double> v2;
+  
+  std::cout<< "type the number of values for the vector: "<<std::endl;
+  std::cin>> m;
+  
+  std::cout<< "type the values of the vector: "<<std::endl;
+
+  for(int l=0; l<m; l++){
+
+    std::cin>> n;
+    v1.push_back(n);
+  }
+  
+  std::cout<< "type the value of numbers to be selected by the vector: "<<std::endl;
+  std::cin>> n;
+
+  filter_v(v1,n,v2);
+
+  std::cout<<"the new vector is: "<<std::endl;
+  for(int j=0; j<v2.size(); j++){
+
+    std::cout<<v2[j]<<std::endl;
+  }
+}

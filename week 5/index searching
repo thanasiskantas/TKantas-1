@@ -1,0 +1,44 @@
+#include<iostream>
+#include<vector>
+
+int search_vector (int n, const std::vector<int>& vin){
+  bool p;
+  for(int i=0; i<vin.size(); i++){
+    if(vin[i]==n){
+      p = true;
+      return(i);
+    }
+    else{
+      p = false;
+    }
+  }
+  if(p==false){
+    return(-1);
+  }
+}
+
+int main(){
+
+  int k,m,l;
+  std::vector<int>v;
+
+  std::cout<<"type the number of values you want the vector to have: " <<std::endl;
+  std::cin>> k;
+  
+  std::cout<< "type the diffrent values you want the vector to have: "<<std::endl;
+  
+  for(int j=0; j<k; j++){
+    std::cin>>m;
+    v.push_back(m);
+  }
+
+  std::cout<< "type a value you want to search for in the vector: "<< std::endl;
+  std::cin>> l;
+  
+  if(search_vector(l,v) == -1){
+    std::cout<<"the number you searched for is not in the vector";
+  }
+  else{
+    std::cout<<"the index of the number you searched for is: "<< search_vector(l,v);
+  }
+}

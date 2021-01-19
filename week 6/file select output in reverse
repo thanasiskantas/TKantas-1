@@ -1,0 +1,54 @@
+#include <iostream>
+#include <fstream>
+#include <cstdlib>
+#include <vector>
+#include <string>
+
+int main(){
+ //FILE IN
+  std::string input_file_name;
+  std::string output_file_name;
+ 
+  std::cout<< "enter the file you want to read from: "<< std::endl;
+  std::cin>> input_file_name;
+
+  std::cout<< "enter the file you want to write on: "<< std::endl;
+  std::cin>> output_file_name;
+
+
+  std::ifstream infile; 
+  infile.open(input_file_name);
+
+  std::vector<int> v;
+  std::vector<int> vout;
+  
+  if(!infile.is_open()){ 
+    std::cout << "error opening infile" << std::endl;
+    return EXIT_FAILURE;
+  }
+
+  int tmp;
+
+  while(infile >> tmp){
+    v.push_back(tmp); 
+  }
+  for(int j=1; j<=v.size(); j++){
+    vout.push_back(v[v.size()-j]);
+  }
+  infile.close(); 
+
+ //FILE OUT
+  std::ofstream outfile;
+  outfile.open(output_file_name);
+
+  if(!outfile.is_open()){
+
+    std::cout<<"error opening outfile"<< std::endl;
+    return EXIT_FAILURE;
+  }
+
+  for(int i=0; i<vout.size(); i++){
+    outfile << vout[i] <<std::endl;
+  }
+  outfile.close();
+}

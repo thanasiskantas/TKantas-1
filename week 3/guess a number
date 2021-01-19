@@ -1,0 +1,67 @@
+#include <iostream>
+#include <string>
+int main(){
+  
+  std::string ans1;
+  std::string ans2;
+  std::string ans3;
+  std::string ans4;
+  int lowb = -50, upb = 50, n;
+  
+  std::cout << "athina wants you to think of a number between -50 and 50" << std::endl << std::endl;
+  
+  
+  for(int i = 0; upb-lowb != 10; i++){
+  
+    std::cout<< "is your number below: " << upb << " - 5 ?"<< std::endl;
+    std::cin>> ans1; 
+
+    if(ans1 == "yes"){
+
+      upb = upb - 5;
+    }
+
+    std::cout<< "is your number above: " << lowb << " + 5 ?"<< std::endl;
+    std::cin>> ans2;
+
+    if(ans2 == "yes"){
+
+      lowb = lowb + 5;
+    } 
+    
+    std::cout<< "lower boundary is: " << lowb << std::endl;
+    std::cout<< "upper boundary is: " << upb << std::endl << std::endl;
+  
+  }
+ 
+ //SECOND PART
+
+
+  for(int j = 0; upb-lowb != 1; j++){
+  
+    std::cout<< "is your number below: " << upb << " - 1 ?"<< std::endl;
+    std::cin>> ans3; 
+
+    if(ans3 == "yes"){
+
+      upb = upb - 1;
+    }
+
+    std::cout<< "is your number above: " << lowb << " + 1 ?"<< std::endl;
+    std::cin>> ans4;
+
+    if(ans2 == "yes"){
+
+      lowb = lowb + 1;
+    } 
+    
+    std::cout<< "lower boundary is: " << lowb << std::endl;
+    std::cout<< "upper boundary is: " << upb << std::endl << std::endl;
+  
+  }
+
+  std::cout<< "your number is either: "<<lowb << " or "<< upb << std::endl << "(I dont give a fck to be honest)  :)";
+
+
+
+}

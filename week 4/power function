@@ -1,0 +1,34 @@
+#include<iostream>
+
+int power(int b, int e){
+  int res = 1;
+  
+  if(e != 0){
+    
+    for(int i=1; i<=e; i++){
+      
+      res = b * res;
+
+    }
+  }
+
+  if(e == 0){
+    res = 1;
+  }
+
+  return res;
+}
+
+
+int main(){
+  
+  int x, n;
+  
+  std::cout<< "give a value for the base: ";
+  std::cin>> x;
+
+  std::cout<< "give a value for the exponent: " << std::endl;
+  std::cin>> n;
+  
+  std::cout<< "the result is: " << power(x,n);
+}

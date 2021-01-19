@@ -1,0 +1,21 @@
+#include <iostream>
+
+int main(){
+ 
+  int n;
+  
+  std::cout << "write an integer" << std::endl;
+
+  std::cin >> n;
+  
+  for(int e=1, m=1; e<=n; e++, m++){  
+
+    for (int i=1; i<=n; i++){
+
+     std::cout << m * i << "  ";
+    }
+
+    std::cout << std::endl;
+  
+  }  
+}

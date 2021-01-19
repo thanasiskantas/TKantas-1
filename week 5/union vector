@@ -1,0 +1,79 @@
+#include<iostream>
+#include<vector>
+
+int search_vector (int n, const std::vector<int>& vin){
+  bool p;
+  for(int i=0; i<vin.size(); i++){
+    if(vin[i]==n){
+      p = true;
+      return(i);
+    }
+    else{
+      p = false;
+    }
+  }
+  if(p==false){
+    return(-1);
+  }
+
+}
+
+void union_vector(const std::vector<int>& vin1, const std::vector<int>& vin2, std::vector<int>& vout){
+  
+  for(int i=0; i< vin1.size(); i++){
+    vout.push_back(vin1[i]);
+  }
+
+  for(int j=0; j< vin2.size(); j++){
+
+    if(search_vector(vin2[j],vin1) == -1){
+      vout.push_back(vin2[j]);
+    }  
+  }
+}
+
+int main(){
+
+  int n1, n2, m1, m2; 
+ 
+  std::vector <int> vin1;
+  std::vector <int> vin2;
+  std::vector <int> vout;
+
+
+
+  // FIRST VECTOR
+  std::cout<<"type how many values do you want your first vector to have: "<<std::endl;
+  std::cin>> n1;
+
+  std::cout<<"type the values you want the first vector to contain: " << std::endl;
+  
+  for (int i=0; i<n1; i++){
+    std::cin>> m1;
+    vin1.push_back(m1);
+  }
+
+
+  //SECOND VECTOR
+  std::cout<<"type how many values do you want your second vector to have: "<<std::endl;
+  std::cin>> n2;
+
+  std::cout<<"type the values you want the second vector to contain: " << std::endl;
+  
+  for (int j=0; j<n2; j++){
+    std::cin>> m2;
+    vin2.push_back(m2);
+  }
+
+
+  //UNION VECTOR
+  std::cout<<"the union vector of the two vectors you entered is: "<<std::endl;
+
+  union_vector(vin1, vin2, vout);
+
+  for(int z = 0; z<vout.size(); z++){
+    std::cout<<vout[z]<<std::endl;
+  }
+
+}
+

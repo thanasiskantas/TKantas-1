@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+
+void swap_string (std::string&s1, std::string&s2){
+  std::string t;
+
+  t = s2;
+
+  s2 = s1;
+  s1 = t;
+
+}
+
+int main(){
+  std::string t1;
+  std::string t2;
+
+  std::cout<< "write the 1st piece of text"<< std::endl;
+  std::cin>> t1;
+
+  std::cout<< "write the second piece of text"<< std::endl;
+  std::cin >> t2;
+
+  swap_string(t1,t2);
+
+  std::cout<< "now, the 1st piece of text is changed to: " << t1 << std::endl << "also, the second piece of text is changed to: " << t2;
+  
+}

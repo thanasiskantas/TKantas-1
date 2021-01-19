@@ -1,0 +1,35 @@
+#include<iostream>
+#include<vector>
+
+double min_vector_element(const std::vector<double>& vin){
+  int h=99999;
+  
+  for (int j = 0; j< vin.size(); j++){
+    
+    if(vin[j]<h){
+      h = vin[j];
+    }
+  }
+  return h;
+
+}
+
+
+int main(){
+  int n, k;
+  double m;
+  std::vector <double>vin;
+
+  std::cout<<"type how many values do you want your vector to have: "<<std::endl;
+  std::cin>> n;
+
+  std::cout<<"type the values you want the vector to contain: " << std::endl;
+  
+  for (int i=0; i<n; i++){
+    std::cin>> m;
+    vin.push_back(m);
+  }
+
+  std::cout<< "the smallest number contained in the vector is: " << std::endl << min_vector_element(vin);
+
+}
