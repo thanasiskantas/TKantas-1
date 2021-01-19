@@ -1,0 +1,45 @@
+#include <iostream>
+#include <vector>
+#include <cmath>
+
+struct point{
+  double x;
+  double y;
+};
+
+
+int main(){
+
+  double a, b, c;
+  
+  std::cout << "type the values of a quadratic of the form ax^2 + bx + c = 0 you want to solve:"<<std::endl;
+  
+  std::cout<< "a: ";
+  std::cin >> a;
+
+  std::cout<< "b: ";
+  std::cin >> b;
+
+  std::cout<< "c: ";
+  std::cin >> c;
+
+  point x1, x2;
+  
+  
+  if( (b*b-4*a*c)<0 ){
+    x1.y = (std::sqrt(-(b*b-4*a*c)))/2*a;
+    x1.x = -b/(2*a);
+
+    x2.y = -(std::sqrt(-(b*b-4*a*c)))/2*a;
+    x2.x = -b/(2*a);
+  
+    std::cout<< "The two solutions to the quation are: " << std::endl << "x1 = " << x1.x << "+ i*("<< x1.y << ")  &" << std::endl << "x2 = " << x2.x << "+ i("<< x2.y << ")";
+  }
+  else{
+    x1.x = (-b + std::sqrt(b*b-4*a*c))/2*a;
+    x2.x = (-b - std::sqrt(b*b-4*a*c))/2*a; 
+  
+    std::cout<< "The two solutions to the quation are: " << std::endl << "x1 = " << x1.x << "  &" << std::endl << "x2 = " << x2.x ;
+  }  
+
+}
